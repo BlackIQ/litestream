@@ -15,7 +15,7 @@ This Docker image is built to serve static files using **Nginx**. You can use it
 First, you need to pull the Docker image from DockerHub:
 
 ```bash
-docker pull blackiq/litestream:latest
+docker pull blackiq/litestream:1.0.0
 ```
 
 ### Run the Container
@@ -23,7 +23,7 @@ docker pull blackiq/litestream:latest
 To run the container and serve your files, use the following `docker run` command:
 
 ```bash
-docker run -p 8080:80 -v /path/to/your/files:/media --rm --name file-server blackiq/litestream:latest
+docker run -p 8080:80 -v /path/to/your/files:/media --rm --name file-server blackiq/litestream:1.0.0
 ```
 
 - **8080:80**: Maps port `80` in the container to port `8080` on your host machine. You can adjust this as needed.
@@ -36,7 +36,7 @@ After running the command, you can visit `http://ip:8080` (or the port you speci
 ### Example
 
 ```bash
-docker run -p 10000:80 -v ~/movies:/media --rm --name movies-server blackiq/litestream:latest
+docker run -p 10000:80 -v ~/movies:/media --rm --name movies-server blackiq/litestream:1.0.0
 ```
 
 This will serve the files in the `~/movies` directory and make them accessible via `http://localhost:10000`.
